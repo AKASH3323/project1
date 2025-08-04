@@ -1,0 +1,36 @@
+
+<h1>number guessing game</h1>
+<input id="guessnumber">
+<button onclick="checking()">check</button>
+<p id="result">you are right / wrong</p>
+<p id="score">Score:10</p>
+<script>
+var guessnumber=document.getElementById("guessnumber")
+var result=document.getElementById("result")
+var score=document.getElementById("score")
+var randomnumber=Math.floor(Math.random()*10)+1
+var tottalScore=10
+function checking()
+{
+    var enterednumber=guessnumber.value
+    if(enterednumber==randomnumber){
+        console.log("right")
+    result.textContent="right"
+alert("you won...🥳")
+}
+else{
+    tottalScore=tottalScore-1
+    score.textContent="score:"+tottalScore
+    console.log("wrong")
+    result.textContent="wrong"
+}
+}
+
+
+
+
+
+
+
+
+</script>
